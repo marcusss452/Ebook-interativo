@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grandes Economistas e o Mercado Financeiro – Edição Interativa</title>
+  <!-- Inserindo um framework CSS leve (Bootstrap) para ajudar na estilização -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Inserindo Plotly para gráficos interativos -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      padding-top: 60px;
+    }
+    .menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: #f8f9fa;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #ddd;
+    }
+    .content {
+      margin-left: 270px;
+      padding: 20px;
+    }
+    .section {
+      padding: 20px 0;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">EBook Interativo</a>
+  </nav>
+
+  <!-- Menu Lateral -->
+  <div class="menu">
+    <h5>Índice</h5>
+    <ul class="list-unstyled">
+      <li><a href="#cap1">1. Introdução ao Mercado Financeiro</a></li>
+      <li><a href="#cap2">2. Grandes Economistas e Suas Ideias</a></li>
+      <li><a href="#cap3">3. Grandes Investidores e Suas Estratégias</a></li>
+      <li><a href="#cap4">4. Aplicando as Ideias no Mercado</a></li>
+      <li><a href="#cap5">5. Reflexões e Tendências Futuras</a></li>
+      <li><a href="#cap6">6. O Tarifasso do Trump</a></li>
+      <li><a href="#cap7">7. Estudos Avançados: Economia & Bitcoin</a></li>
+    </ul>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="content">
+    <!-- Capítulo 1 -->
+    <section id="cap1" class="section">
+      <h2>1. Introdução ao Mercado Financeiro</h2>
+      <p>
+        O mercado financeiro conecta investidores, empresas e governos. Ele permite a alocação eficaz de recursos e forma a base para decisões econômicas. Utilize os gráficos abaixo para explorar dados históricos, como PIB, inflação e taxa de juros.
+      </p>
+      <div id="graph-cap1" style="height: 400px;"></div>
+      <script>
+        // Exemplo simples de gráfico para o Capítulo 1 usando Plotly
+        var cap1_data = [
+          {
+            x: ['2010', '2012', '2014', '2016', '2018', '2020', '2022'],
+            y: [1000, 1500, 1700, 1600, 1800, 2200, 2100],
+            type: 'line',
+            name: 'PIB'
+          },
+          {
+            x: ['2010', '2012', '2014', '2016', '2018', '2020', '2022'],
+            y: [3.5, 2.8, 2.6, 3.1, 2.9, 1.8, 2.4],
+            type: 'line',
+            name: 'Inflação (%)'
+          }
+        ];
+        Plotly.newPlot('graph-cap1', cap1_data);
+      </script>
+    </section>
+
+    <!-- Capítulo 2 -->
+    <section id="cap2" class="section">
+      <h2>2. Grandes Economistas e Suas Ideias</h2>
+      <p>
+        Explore as contribuições de Adam Smith, John Maynard Keynes, Milton Friedman, Celso Furtado e Roberto Campos. Clique nos marcos da linha do tempo abaixo para obter mais detalhes.
+      </p>
+      <!-- Linha do tempo (pode ser um gráfico ou um componente interativo customizado) -->
+      <div id="timeline-cap2">
+        <ul>
+          <li><strong>1776:</strong> Publicação de "A Riqueza das Nações" (Adam Smith)</li>
+          <li><strong>1936:</strong> Teoria do Intervencionismo (Keynes)</li>
+          <li><strong>1960-1980:</strong> Consolidação do Monetarismo (Friedman)</li>
+          <li><strong>Décadas 1960-1980:</strong> Análise do desenvolvimento (Celso Furtado)</li>
+          <li><strong>Década de 1990:</strong> Reformas liberais (Roberto Campos)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Capítulo 3 -->
+    <section id="cap3" class="section">
+      <h2>3. Grandes Investidores e Suas Estratégias</h2>
+      <p>
+        Estude a filosofia de investimentos de Warren Buffett e Charlie Munger. Acompanhe gráficos comparativos que demonstram a evolução dos patrimônios versus os índices de mercado.
+      </p>
+      <div id="graph-cap3" style="height: 400px;"></div>
+      <script>
+        // Exemplo simples de gráfico comparativo para Capítulo 3
+        var cap3_data = [
+          {
+            x: ['2000', '2005', '2010', '2015', '2020'],
+            y: [5000, 7000, 12000, 22000, 35000],
+            type: 'line',
+            name: 'Berkshire Hathaway'
+          },
+          {
+            x: ['2000', '2005', '2010', '2015', '2020'],
+            y: [4500, 6500, 11000, 21000, 34000],
+            type: 'line',
+            name: 'S&P 500'
+          }
+        ];
+        Plotly.newPlot('graph-cap3', cap3_data);
+      </script>
+    </section>
+
+    <!-- Capítulo 4 -->
+    <section id="cap4" class="section">
+      <h2>4. Aplicando as Ideias no Mercado</h2>
+      <p>
+        Uma abordagem prática para análise fundamental e gestão de riscos. Utilize dashboards interativos para correlacionar indicadores macroeconômicos com o desempenho de ativos e estratégias de investimento.
+      </p>
+      <!-- Aqui você pode inserir um iframe ou componentes de gráficos interativos desenvolvidos com Power BI, Dash ou outros -->
+      <p>[Área para dashboard interativo – exemplo: correlação entre PIB, inflação e ativos]</p>
+    </section>
+
+    <!-- Capítulo 5 -->
+    <section id="cap5" class="section">
+      <h2>5. Reflexões Finais e Tendências Futuras</h2>
+      <p>
+        Uma síntese dos principais aprendizados e projeções para novos cenários: tecnologia, ESG e mudanças geopolíticas.
+      </p>
+      <div id="graph-cap5" style="height: 400px;"></div>
+      <script>
+        // Exemplo simples de gráfico de projeção para o futuro
+        var cap5_data = [
+          {
+            x: ['2023', '2025', '2027', '2030'],
+            y: [100, 120, 140, 160],
+            type: 'line',
+            name: 'Projeção de Crescimento (Exemplo)'
+          }
+        ];
+        Plotly.newPlot('graph-cap5', cap5_data);
+      </script>
+    </section>
+
+    <!-- Capítulo 6 -->
+    <section id="cap6" class="section">
+      <h2>6. O Tarifasso do Trump e Seus Impactos</h2>
+      <p>
+        Um estudo detalhado sobre as medidas tarifárias adotadas durante o mandato Trump e seus efeitos nos mercados globais. Confira a linha do tempo interativa e os estudos de caso.
+      </p>
+      <div id="graph-cap6" style="height: 400px;"></div>
+      <script>
+        // Exemplo simples de linha do tempo para o tarifasso
+        var cap6_data = [
+          {
+            x: ['2018', '2019', '2020'],
+            y: [20, 25, 15],
+            type: 'bar',
+            name: 'Tarifas (%)'
+          }
+        ];
+        Plotly.newPlot('graph-cap6', cap6_data);
+      </script>
+    </section>
+
+    <!-- Capítulo 7 -->
+    <section id="cap7" class="section">
+      <h2>7. Estudos Avançados: Economia Americana e Bitcoin</h2>
+      <p>
+        Explore a correlação entre as decisões do Federal Reserve e o desempenho do Bitcoin. Utilize o dashboard interativo para simular cenários modificando a taxa de juros e visualizar as projeções preditivas.
+      </p>
+      <!-- Simulação interativa: Gráfico de previsão com campo de input para simulação -->
+      <div id="graph-cap7" style="height: 400px;"></div>
+      <div class="mt-3">
+        <label for="inputRateChange">Simule alteração na taxa de juros (pontos percentuais):</label>
+        <input type="number" id="inputRateChange" value="0.5" step="0.1">
+        <button id="simulateButton" class="btn btn-primary">Simular Cenário</button>
+      </div>
+      <script>
+        // Exemplo simples: gráfico de previsão simulado
+        var initial_forecast = {
+          x: ['2023-07-01', '2023-07-02', '2023-07-03', '2023-07-04', '2023-07-05'],
+          y: [35000, 35500, 36000, 35800, 36200],
+          type: 'line',
+          name: 'Previsão Bitcoin'
+        };
+
+        Plotly.newPlot('graph-cap7', [initial_forecast]);
+
+        // Código simples para atualizar simulação (em uma aplicação real, esse acionaria uma função que integra o modelo ARIMAX, por exemplo)
+        document.getElementById('simulateButton').addEventListener('click', function() {
+          var rateChange = parseFloat(document.getElementById('inputRateChange').value);
+          // Simulação: alterar os valores de previsão com base na alteração
+          var simulatedValues = initial_forecast.y.map(function(v) { return v + (rateChange * 100); });
+          var update = { y: [simulatedValues] };
+          Plotly.update('graph-cap7', update);
+        });
+      </script>
+    </section>
+
+    <!-- Conclusão -->
+    <section id="conclusao" class="section">
+      <h2>Conclusão</h2>
+      <p>
+        Este eBook interativo integra o pensamento de grandes economistas e investidores com dados e simulações atualizadas, permitindo uma compreensão profunda do mercado financeiro e das tendências futuras. Experimente interagir com os dashboards, filtre os dados e simule cenários para adaptar suas estratégias de investimento.
+      </p>
+    </section>
+  </div>
+
+  <!-- Scripts opcionais do Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
